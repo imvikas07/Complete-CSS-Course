@@ -1,0 +1,19 @@
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: skyblue;
+    border: 2px solid green;
+}
+
+.block {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.inline-block {
+    display: inline-block;
+}
