@@ -1,0 +1,52 @@
+<!--An external CSS file is a separate file containing CSS code that is linked to an HTML document. Here's how to do it:
+
+1. **Create a CSS File**: First, you need to create a new text file with a `.css` extension. You can name it whatever you like, but it's common to name it something like `styles.css`.
+
+2. **Write CSS Code**: Inside the CSS file, you can write your CSS rules just like you would in a `<style>` tag in HTML. For example:
+
+    ```css
+    /* Day-01.css */
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+    }
+
+    h1 {
+        color: blue;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    ```
+
+    In this example:
+    - `body`, `h1`, and `p` are CSS selectors targeting HTML elements.
+    - Within the curly braces `{ }`, you specify the CSS properties and their corresponding values.
+
+3. **Link CSS File to HTML**: In your HTML document, you need to add a `<link>` tag inside the `<head>` section to link the external CSS file. For example:
+-->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>External CSS Example</title>
+        <!-- Link to external CSS file -->
+        <link rel="stylesheet" href="day-01.css">
+    </head>
+    <body>
+        <h1>This is a Heading</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga distinctio, deleniti veritatis ratione cum in esse voluptatibus ducimus minima! Doloribus tenetur fugit ullam maxime molestias id eos fugiat similique amet!</p>
+    </body>
+    </html>
+
+    <!--
+        In this example, the `<link>` tag specifies the `href` attribute, which contains the path to the external CSS file (`styles.css` in this case). The `rel` attribute specifies the relationship between the HTML document and the linked resource, in this case, a stylesheet.
+That's it! Now the CSS rules defined in the external file (`styles.css`) will be applied to the HTML elements in your document. External CSS files are commonly used for larger projects because they allow for better organization, reusability, and maintainability of CSS code.
+
+    -->
+
+
