@@ -1,0 +1,108 @@
+<!--
+Understanding cascade, specificity, and inheritance is fundamental to mastering CSS. Let's break down each concept with detailed explanations and examples.
+
+### Cascade:
+
+Cascade refers to the process of determining which styles should be applied to an HTML element when there are conflicting or overlapping styles defined. 
+The cascade operates based on a set of rules, allowing CSS to prioritize and resolve conflicting styles.
+
+#### Cascade Rules:
+
+1. **Specificity**: Styles with higher specificity override those with lower specificity.
+2. **Order of Appearance**: Styles that appear later in the CSS file or are defined inline override styles defined earlier.
+3. **Importance**: Styles marked with `!important` override all other styles.
+4. **Origin**: User agent stylesheets < User stylesheets < Author stylesheets < Author stylesheets marked with `!important`.
+
+### Specificity:
+
+Specificity determines which CSS rule is applied by considering the selector's complexity and specificity values.
+
+#### Specificity Hierarchy:
+
+1. **Inline Styles**: Styles defined directly on the HTML element using the `style` attribute.
+2. **ID Selectors**: Styles applied to elements with an `id` attribute.
+3. **Class, Attribute, and Pseudo-Class Selectors**: Styles applied using classes, attributes, or pseudo-classes like `:hover`.
+4. **Element Type Selectors**: Styles applied to HTML elements directly.
+5. **Universal Selector (*)**: Styles that apply to all elements.
+6. **Inheritance**: Styles inherited from parent elements.
+
+### Inheritance:
+
+Inheritance is the mechanism by which certain properties of CSS are passed from parent elements to their children.
+
+#### Inherited Properties:
+
+Not all CSS properties are inherited. Properties like font-size, color, and text-align are inherited by default. However, properties like width, height, and margin are not inherited.
+
+#### Example HTML and CSS:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Cascade, Specificity & Inheritance</title>
+    <link rel="stylesheet" href="Day-03.css">
+</head>
+<body>
+    <div id="parent" class="container">
+        <p>This is a paragraph inside a div.</p>
+        <p class="highlight">This is another paragraph with a class.</p>
+    </div>
+</body>
+</html>
+
+
+<!--
+
+/* styles.css */
+/* Specificity: ID Selector */
+#parent {
+    color: blue; /* Overrides color: green */
+}
+
+/* Specificity: Class Selector */
+.container {
+    color: green;
+}
+
+/* Inheritance */
+.highlight {
+    font-weight: bold; /* Inherits color: blue */
+}
+```
+
+#### Explanation:
+
+- In the HTML, there's a `div` element with an ID of "parent" and a class of "container". Inside the `div`, there are two `p` elements, one with a class of "highlight".
+- In the CSS:
+  - The `#parent` selector has higher specificity than `.container`, so its color (blue) overrides the color (green) defined by `.container`.
+  - The `.highlight` class applies `font-weight: bold`, and it inherits the color blue from its parent (`#parent`), as it doesn't define its own color.
+  
+### Summary:
+
+Understanding the cascade, specificity, and inheritance is crucial for writing maintainable and predictable CSS. Remember, CSS is powerful but can also be complex. Practicing with examples and experimenting will help solidify your understanding.
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

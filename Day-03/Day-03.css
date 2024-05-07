@@ -1,0 +1,15 @@
+/* styles.css */
+/* Specificity: ID Selector */
+#parent {
+    color: blue; /* Overrides color: green */
+}
+
+/* Specificity: Class Selector */
+.container {
+    color: green;
+}
+
+/* Inheritance */
+.highlight {
+    font-weight: bold; /* Inherits color: blue */
+}
