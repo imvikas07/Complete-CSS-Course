@@ -1,0 +1,72 @@
+<!--
+
+### CSS Box Model
+
+The CSS Box Model describes how elements are structured and how their content, padding, border, and margin are calculated and rendered. Here's a breakdown of each component:
+
+1. **Content**: The actual content of the element, such as text, images, etc.
+2. **Padding**: The space between the content and the element's border.
+3. **Border**: The border surrounding the padding and content.
+4. **Margin**: The space outside the border, which separates this element from other elements.
+
+#### Demonstration Code:
+-->
+
+<!--
+Let's create an HTML file with a simple example to illustrate the CSS Box Model:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Day-05.css">
+    <title>Css Box Model Example</title>
+</head>
+<body>
+    <div class='box'>
+        this is content of the box</div>
+    
+</body>
+</html>
+
+
+<!--
+#### Explanation:
+
+In the above code:
+
+- We have a `<div>` element with the class "box". This is our box.
+- We've set its width, height, padding, border, margin, and background color using CSS.
+- The `padding`, `border`, and `margin` properties are all influencing the size and spacing of our box.
+- The content of the box is just a simple text.
+
+### "overflow" Property in CSS
+
+The "overflow" property in CSS controls what happens when content overflows its box. It can have the following values:
+
+- **visible**: Default. Content is not clipped and may be rendered outside the box.
+- **hidden**: Content that overflows the box is hidden.
+- **scroll**: Adds a scrollbar to the box to scroll the content that overflows.
+- **auto**: Similar to scroll, but the scrollbar is only added when needed.
+
+#### Example:
+
+Let's modify our previous example to demonstrate the "overflow" property:
+-->
+
+
+<div class="box">
+  This is some long content that will overflow the box.
+</div>
+
+<!--
+
+#### Explanation:
+
+In this example, by setting `overflow: hidden;`, any content that overflows the box will be hidden. Try changing this value to "visible", "scroll", or "auto" to see how it affects the overflow behavior.
+
+These examples should give you a good starting point to understand the CSS Box Model and the "overflow" property. Feel free to experiment with different values and properties to further enhance your understanding!
+
+-->
