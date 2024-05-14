@@ -1,0 +1,75 @@
+<!--
+
+### 1. **rem (root em) Unit:**
+- `rem` stands for "root em". It's relative to the font size of the root element, typically the `<html>` element.
+- It's useful for creating scalable layouts because it's not affected by nested elements' font sizes.
+- For instance, if the font size of the `<html>` element is 16px, `1rem` equals 16px.
+-->
+
+<!--
+
+**Example:**
+```css
+html {
+    font-size: 16px;
+}
+
+.container {
+    font-size: 1.5rem; /* 1.5 times the root font size */
+    /* This will be 24px if the root font size is 16px */
+}
+```
+
+### 2. **em Unit:**
+- `em` unit is relative to the font size of its parent element.
+- This makes it useful for creating scalable designs within nested elements.
+
+**Example:**
+```css
+.parent {
+    font-size: 16px;
+}
+
+.child {
+    font-size: 1.5em; /* 1.5 times the parent's font size */
+    /* This will be 24px if the parent's font size is 16px */
+}
+```
+-->
+
+<!--
+
+### Comparison:
+- `rem` units are more predictable and easier to manage for layout scaling because they are relative to the root font size.
+- `em` units are more flexible for relative sizing within nested elements.
+
+**Usage Tips:**
+- Use `rem` for overall layout scaling (e.g., for setting widths, margins, paddings).
+- Use `em` for scalable typography or when you need relative sizing within nested elements.
+
+**Code Demonstration:**
+Let's demonstrate with a simple HTML structure:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REM and EM Demonstration</title>
+    <link rel="stylesheet" href="Day-08.css">
+</head>
+<body>
+    <div class="container">
+        <p>This is a container with text.</p>
+        <div class="nested">
+            <p>This is nested text.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<!--
+In this demonstration, `.container` uses `rem` units for font-size, width, and padding, ensuring scalability. The `.nested` div uses `em` units for font-size and margin, which are relative to its parent `.container`.
+-->
+
