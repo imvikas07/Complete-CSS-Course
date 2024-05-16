@@ -1,0 +1,36 @@
+/* Styling for all boxes */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+  }
+  /* Relative positioning */
+  .relative {
+    position: relative; /* Element positioned relative to its normal position */
+    top: 20px; /* Move the box 20px down */
+    left: 20px; /* Move the box 20px to the right */
+  }
+  /* Absolute positioning */
+  .absolute {
+    position: absolute; /* Element positioned relative to nearest positioned ances
+    top: 50px; /* Position the box 50px from the top of the container */
+    left: 50px; /* Position the box 50px from the left of the container */
+  }
+  /* Fixed positioning */
+  .fixed {
+    position: fixed; /* Element positioned relative to viewport */
+    top: 10px; /* Position the box 10px from the top of the viewport */
+    right: 10px; /* Position the box 10px from the right of the viewport */
+  }
+  /* Sticky positioning */
+  .sticky {
+    position: sticky; /* Element positioned based on scroll position */
+    top: 0; /* Initially positioned at the top of the container */
+  }
+  /* Container to demonstrate scrolling */
+  .container {
+    height: 2000px; /* Just to demonstrate scrolling */
+  }
