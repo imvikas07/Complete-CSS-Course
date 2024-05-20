@@ -1,0 +1,41 @@
+/* This is the flex container */
+.flex-container {
+    display: flex; /* Turns this element into a flex container */
+    border: 1px solid #ccc; /* Adds a border around the container */
+    padding: 10px; /* Adds some padding inside the container */
+    background: #b590ca;
+}
+
+/* Flex items */
+.flex-item {
+    background: #f5cab3; /* Sets a light grey background color */
+    margin: 5px; /* Adds space around each flex item */
+    padding: 20px; /* Adds space inside each flex item */
+    flex: 1; /* Makes each item grow equally to fill the container */
+}
+
+.wrap-container {
+    display: flex; /* Flexbox layout */
+    flex-direction: row; /* Horizontal layout */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow items to wrap */
+    border: 1px solid #ccc; /* Border for visual aid */
+    padding: 10px; /* Padding inside container */
+    background: #6e60a0;
+}
+
+.wrap-item {
+    background-color:#4e90a4; /* Light grey background */
+    margin: 5px; /* Space around each item */
+    padding: 20px; /* Space inside each item */
+    flex-grow: 1; /* Grow to fill space */
+    flex-shrink: 1; /* Shrink if needed */
+    flex-basis: 200px; /* Default size */
+    align-self: auto; /* Default alignment */
+}
+
+/* Changing the order of the first item */
+.wrap-item:first-child {
+    order: 2; /* Will appear last */
+}
