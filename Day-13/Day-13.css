@@ -1,0 +1,31 @@
+/* Base styles for all screen sizes */
+.responsive-text {
+    font-size: 16px;
+    background-color: lightblue;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Styles for screens with a maximum width of 600px */
+@media (max-width: 600px) {
+    .responsive-text {
+        background-color: lightgreen; /* Change background color */
+        font-size: 14px; /* Decrease font size */
+    }
+}
+
+/* Styles for screens with a minimum width of 601px and a maximum width of 1200px */
+@media (min-width: 601px) and (max-width: 1200px) {
+    .responsive-text {
+        background-color: lightcoral; /* Change background color */
+        font-size: 18px; /* Increase font size */
+    }
+}
+
+/* Styles for screens with a minimum width of 1201px */
+@media (min-width: 1201px) {
+    .responsive-text {
+        background-color: lightyellow; /* Change background color */
+        font-size: 20px; /* Increase font size */
+    }
+}

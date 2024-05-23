@@ -1,0 +1,67 @@
+<!--
+
+
+### What are Media Queries?
+
+Media queries are a CSS feature used to apply styles based on the characteristics of the device displaying the content, such as its width, height, orientation, and resolution. They are commonly used to create responsive web designs, ensuring that the layout and content of a website adapt smoothly to different screen sizes and devices.
+
+### Basic Syntax
+
+The basic syntax of a media query looks like this:
+
+```css
+@media (condition) {
+  /* CSS rules go here */
+}
+```
+
+### Common Conditions
+
+- `max-width`: Applies styles if the viewport width is less than or equal to a certain value.
+- `min-width`: Applies styles if the viewport width is greater than or equal to a certain value.
+- `max-height` and `min-height`: Apply styles based on the height of the viewport.
+- `orientation`: Checks if the device is in landscape or portrait mode.
+
+### Example with Code and Comments
+
+Let's create a simple example to demonstrate media queries. We will change the background color and font size of a paragraph based on the viewport width.
+
+#### HTML (index.html)
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query Example</title>
+    <link rel="stylesheet" href="Day-13.css">
+</head>
+<body>
+    <p class="responsive-text">This is a responsive paragraph.</p>
+</body>
+</html>
+
+<!--
+### Explanation
+
+1. **Base Styles**: 
+   - By default, the paragraph has a font size of 16px and a light blue background.
+
+2. **Small Screens (max-width: 600px)**:
+   - If the viewport width is 600px or less, the paragraph's background color changes to light green, and the font size decreases to 14px.
+
+3. **Medium Screens (min-width: 601px and max-width: 1200px)**:
+   - If the viewport width is between 601px and 1200px, the background color changes to light coral, and the font size increases to 18px.
+
+4. **Large Screens (min-width: 1201px)**:
+   - If the viewport width is 1201px or more, the background color changes to light yellow, and the font size increases to 20px.
+
+### Testing the Example
+
+You can test this example by resizing your browser window or using the developer tools (usually accessed with F12) to simulate different screen sizes. You should see the background color and font size of the paragraph change according to the specified media queries.
+
+This is a basic introduction to media queries in CSS. As you become more comfortable with them, you'll be able to create more complex and adaptive layouts for various devices and screen sizes.
+
+-->
