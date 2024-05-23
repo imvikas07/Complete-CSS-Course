@@ -1,0 +1,76 @@
+<!--Understanding how to control the stacking order of elements without using `z-index` can be helpful in certain situations. One common technique to bring an element to the front involves manipulating the DOM hierarchy, 
+specifically using techniques like changing the order of the elements within their parent or altering their positioning properties.
+
+Let's go through a basic example to illustrate this.
+
+### HTML Structure
+
+We'll start with a simple HTML structure:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bring Div to Front</title>
+    <link rel="stylesheet" href="Day-14.css">
+</head>
+<body>
+    <div class="container">
+        <div id="box1" class="box">Box 1</div>
+        <div id="box2" class="box">Box 2</div>
+        <div id="box3" class="box">Box 3</div>
+    </div>
+    <button onclick="bringToFront('box1')">Bring Box 1 to Front</button>
+    <button onclick="bringToFront('box2')">Bring Box 2 to Front</button>
+    <button onclick="bringToFront('box3')">Bring Box 3 to Front</button>
+
+    <script>
+        function bringToFront(id) {
+            const container = document.querySelector('.container');
+            const element = document.getElementById(id);
+            container.removeChild(element);
+            container.appendChild(element);
+        }
+    </script>
+</body>
+</html>
+
+<!--
+
+### Explanation
+
+#### HTML
+
+1. **HTML Structure**: We have a container with three boxes inside. Each box is absolutely positioned within the container.
+2. **Buttons**: Each button calls a function `bringToFront` with the ID of the box that we want to bring to the front.
+
+#### CSS
+
+1. **.container**: This is the parent element that contains all the boxes. It's relatively positioned to serve as a reference point for the absolutely positioned children.
+2. **.box**: General styling for the boxes, including absolute positioning and sizing.
+3. **#box1, #box2, #box3**: Specific styles for each box, including background color and position.
+
+#### JavaScript
+
+1. **bringToFront function**: 
+    - This function takes an ID as an argument.
+    - It selects the container and the element with the given ID.
+    - It removes the element from the container using `removeChild`.
+    - It then appends the element back to the container using `appendChild`.
+
+### How it Works
+
+By removing and re-adding the element to the DOM, we effectively move it to the end of the container's child elements list. In CSS, elements later in the source order are displayed on top of earlier ones if they overlap and don't have a specific `z-index` set. This is leveraging the natural stacking order of HTML elements.
+
+#### Key Points:
+
+- **Natural Stacking Order**: Elements later in the DOM are displayed on top of earlier ones if they overlap and no specific `z-index` is set.
+- **DOM Manipulation**: By removing and re-adding an element, it moves to the end of the DOM order, thus appearing on top.
+
+### Summary
+
+In this demonstration, we controlled the stacking order of elements without using `z-index`. By manipulating the DOM, we can change which element appears on top by re-ordering the elements within their parent container. This technique is useful for beginners to understand how the order of elements in the DOM affects their stacking order in the layout.
+
+-->
