@@ -1,0 +1,83 @@
+<!--
+### Floats in CSS
+
+The `float` property in CSS is used for positioning and formatting content. 
+It allows an element to be taken out of the normal flow of the document and positioned to the left or right of its container, 
+allowing text and inline elements to wrap around it.
+
+### Clears in CSS
+
+The `clear` property is used to control the behavior of floating elements. 
+It specifies which sides of an element should not be adjacent to floating elements. 
+
+### Example Code
+
+We'll create two files: `Day-15.html` and `Day-15.css`.
+
+#### Day-15.html
+
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floats and Clears Example</title>
+    <link rel="stylesheet" href="Day-15.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box float-left">Float Left</div>
+        <div class="box float-right">Float Right</div>
+        <div class="content">
+            <p>This is a paragraph of text that flows around the floating elements. Notice how the text wraps around the floating boxes.</p>
+            <p>Another paragraph of text. This text continues to wrap around the floating elements until a clear is applied.</p>
+        </div>
+        <div class="clear-both"></div>
+        <div class="footer">
+            <p>This is the footer section. It is clear of the floats above.</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<!---
+
+### Explanation of Each Code Line
+
+#### index.html
+- `<!DOCTYPE html>`: Declares the document type and version of HTML.
+- `<html lang="en">`: Specifies the language of the document.
+- `<head>`: Contains meta-information about the document.
+  - `<meta charset="UTF-8">`: Sets the character encoding for the document.
+  - `<meta name="viewport" content="width=device-width, initial-scale=1.0">`: Ensures the page is responsive.
+  - `<title>Floats and Clears Example</title>`: Sets the title of the page.
+  - `<link rel="stylesheet" href="Day-15.css">`: Links the external CSS file.
+- `<body>`: Contains the content of the document.
+  - `<div class="container">`: A wrapper for the content.
+    - `<div class="box float-left">Float Left</div>`: A box floated to the left.
+    - `<div class="box float-right">Float Right</div>`: A box floated to the right.
+    - `<div class="content">`: A container for the main content.
+      - `<p>`: Paragraphs of text that flow around the floating elements.
+    - `<div class="clear-both"></div>`: A clearing element to prevent wrapping around floats.
+    - `<div class="footer">`: The footer section that is clear of floats.
+
+#### styles.css
+- `.container`: Styles the main container.
+- `.box`: Base styles for both floating boxes.
+- `.float-left`: Floats the element to the left.
+- `.float-right`: Floats the element to the right.
+- `.clear-both`: Clears both left and right floats, ensuring that subsequent elements start below the floats.
+- `.content`: Styles for the content section.
+- `.footer`: Styles for the footer section.
+
+### Summary
+
+- **Floats** (`float: left;`, `float: right;`): Used to float elements to the left or right, allowing other content to wrap around them.
+- **Clears** (`clear: both;`): Used to stop content from wrapping around floating elements, ensuring that it starts on a new line below the floats.
+
+This example demonstrates how floats and clears can be used to create complex layouts and control the positioning of elements on a web page.
+
+    -->
