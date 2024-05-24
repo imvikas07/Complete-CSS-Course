@@ -1,0 +1,100 @@
+<!--
+### Basic Concepts of CSS Grid
+
+1. **Grid Container**: The element on which `display: grid;` is applied. It becomes a grid container and all its direct children become grid items.
+2. **Grid Item**: The direct children of the grid container.
+3. **Grid Lines**: The lines that divide the grid into cells. Vertical grid lines run from top to bottom, and horizontal grid lines run from left to right.
+4. **Grid Tracks**: The space between two grid lines. A grid track can be a row or a column.
+5. **Grid Cell**: The space between two adjacent row and two adjacent column grid lines. It's a single "unit" of the grid.
+6. **Grid Area**: A rectangular area that spans multiple grid cells.
+
+### Example: Creating a Simple Grid
+
+We'll create a simple grid layout with three rows and three columns. Let's start with the HTML and CSS.
+
+#### HTML File (index.html)
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Example</title>
+    <link rel="stylesheet" href="Day-16.css">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>
+    </div>
+</body>
+</html>
+
+
+<!--
+
+### Additional Features of CSS Grid
+
+1. **Grid Template Areas**
+   You can use named grid areas to make your layout more semantic.
+
+   ```css
+   .grid-container {
+       display: grid;
+       grid-template-areas: 
+           "header header header"
+           "sidebar main main"
+           "footer footer footer";
+       grid-template-rows: auto 1fr auto;
+       grid-template-columns: 200px 1fr 1fr;
+   }
+
+   .header {
+       grid-area: header;
+   }
+
+   .sidebar {
+       grid-area: sidebar;
+   }
+
+   .main {
+       grid-area: main;
+   }
+
+   .footer {
+       grid-area: footer;
+   }
+   ```
+-->
+
+   <div class="grid-container">
+       <div class="header">Header</div>
+       <div class="sidebar">Sidebar</div>
+       <div class="main">Main Content</div>
+       <div class="footer">Footer</div>
+   </div>
+
+<!--
+
+2. **Span Columns and Rows**
+   You can make grid items span multiple columns or rows.
+
+   ```css
+   .grid-item:nth-child(1) {
+       grid-column: span 2; /* Spans two columns */
+       grid-row: span 2; /* Spans two rows */
+   }
+   ```
+
+
+With this guide, you should have a solid foundation in CSS Grid and be able to create your own grid layouts. Experiment with different properties and values to see how they affect the layout!
+
+-->

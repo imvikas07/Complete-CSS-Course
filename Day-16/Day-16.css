@@ -1,0 +1,22 @@
+/* Define the grid container */
+.grid-container {
+    display: grid; /* Establishes this element as a grid container */
+    grid-template-columns: repeat(3, 1fr); /* Creates three equal columns */
+    grid-template-rows: repeat(3, 100px); /* Creates three rows of 100px height */
+    gap: 10px; /* Adds a 10px gap between grid items */
+    padding: 20px; /* Adds padding around the grid container */
+    background-color: #f0f0f0; /* Sets a light background color for the grid container */
+}
+
+/* Define the grid items */
+.grid-item {
+    background-color: #4caf50; /* Sets the background color of the grid items */
+    color: white; /* Sets the text color of the grid items */
+    display: flex; /* Uses flexbox for centering content */
+    align-items: center; /* Vertically centers the content */
+    justify-content: center; /* Horizontally centers the content */
+    font-size: 24px; /* Sets the font size of the content */
+    border-radius: 5px; /* Rounds the corners of the grid items */
+}
+
+
